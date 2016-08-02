@@ -15,7 +15,10 @@ module.exports = function (grunt) {
                 expand: true,
                 cwd: "git-hooks",
                 src: "pre-commit",
-                dest: ".git/hooks/"
+                dest: ".git/hooks/",
+                options: {
+                    mode: true
+                }
             }
         },
         clean: {
@@ -27,10 +30,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-jshint');
 
-    ;;;
-    ;;;;;;
-    ;;;;;;
-    ;;;;;
+
     ;;;;;
 
     // Clean the .git/hooks/pre-commit file then copy in the latest version

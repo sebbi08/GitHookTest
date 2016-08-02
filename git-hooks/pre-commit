@@ -7,4 +7,7 @@
 #
 # To enable this hook, rename this file to "pre-commit".
 
+#fix for Sourcetree not finding grunt command
+export PATH=/usr/local/bin:$PATH
+
 grunt jshint
